@@ -1,0 +1,47 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/benczel/Documents/Projects/Own/datapao_homework/imdb/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mOscarCalculatorTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 0 and the rating is 7.5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 4 and the rating is 7.5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 10 and the rating is 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 11 and the rating is 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the newly core exceeds the 10[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReviewPenalizerTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- The Shawshank Redemption's new rating is the same as the old[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 12 Angry Men's new rating is smaller than the old one[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- The Godfather's new rating is 8.4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMoviePageParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- get the oscar test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  0 did not equal 7 (MoviePageParserTest.scala:26)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- movie page parser test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  0 did not equal 7 (MoviePageParserTest.scala:31)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- movie page title[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mImdbTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the result count is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get top is lower then 250 and higher then 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get top is lower then 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the top movie is The Shawshank Redemption[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- the top movie's number of ratings is 2,719,862 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  2720035 did not equal 2719862 (ImdbTest.scala:41)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- get movie details by url[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTop250ParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get move id is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get title is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get rating is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get get number of ratings[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get rating column is empty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the text extractor is correct and the first element value is 9.2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 24 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 23[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 20, failed 3, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 3 TESTS FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	hu.datapao.imdb.MoviePageParserTest[0m
+[0m[[0m[31merror[0m] [0m[0m	hu.datapao.imdb.ImdbTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 8 s, completed Mar 28, 2023 6:09:57 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

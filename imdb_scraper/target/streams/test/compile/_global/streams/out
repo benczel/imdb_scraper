@@ -1,0 +1,26 @@
+[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /Users/benczel/Documents/Projects/Own/datapao_homework/imdb/project/target/.sbt-compilation-infos/root-test/.sbt-idea-lock ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benczel/Documents/Projects/Own/datapao_homework/imdb/src/test/scala/hu/datapao/imdb/ReviewPenalizerTest.scala:18:19: not enough arguments for method apply: (title: hu.datapao.imdb.model.Title, numberOfOscars: hu.datapao.imdb.model.Oscars, numberOfRatings: hu.datapao.imdb.model.NumberOfRatings, rating: hu.datapao.imdb.model.Rating, newRating: hu.datapao.imdb.model.Rating): hu.datapao.imdb.model.DataPaoMovie in object DataPaoMovie.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter newRating.[0m
+[0m[[0m[31merror[0m] [0m[0m      DataPaoMovie("The Shawshank Redemption",7, 2700000,9.3),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benczel/Documents/Projects/Own/datapao_homework/imdb/src/test/scala/hu/datapao/imdb/ReviewPenalizerTest.scala:19:19: not enough arguments for method apply: (title: hu.datapao.imdb.model.Title, numberOfOscars: hu.datapao.imdb.model.Oscars, numberOfRatings: hu.datapao.imdb.model.NumberOfRatings, rating: hu.datapao.imdb.model.Rating, newRating: hu.datapao.imdb.model.Rating): hu.datapao.imdb.model.DataPaoMovie in object DataPaoMovie.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter newRating.[0m
+[0m[[0m[31merror[0m] [0m[0m      DataPaoMovie("The Godfather", 3, 1900000, 9.2),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benczel/Documents/Projects/Own/datapao_homework/imdb/src/test/scala/hu/datapao/imdb/ReviewPenalizerTest.scala:20:19: not enough arguments for method apply: (title: hu.datapao.imdb.model.Title, numberOfOscars: hu.datapao.imdb.model.Oscars, numberOfRatings: hu.datapao.imdb.model.NumberOfRatings, rating: hu.datapao.imdb.model.Rating, newRating: hu.datapao.imdb.model.Rating): hu.datapao.imdb.model.DataPaoMovie in object DataPaoMovie.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter newRating.[0m
+[0m[[0m[31merror[0m] [0m[0m      DataPaoMovie("The Dark Knight",2, 2700000, 9.0 ),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benczel/Documents/Projects/Own/datapao_homework/imdb/src/test/scala/hu/datapao/imdb/ReviewPenalizerTest.scala:21:19: not enough arguments for method apply: (title: hu.datapao.imdb.model.Title, numberOfOscars: hu.datapao.imdb.model.Oscars, numberOfRatings: hu.datapao.imdb.model.NumberOfRatings, rating: hu.datapao.imdb.model.Rating, newRating: hu.datapao.imdb.model.Rating): hu.datapao.imdb.model.DataPaoMovie in object DataPaoMovie.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter newRating.[0m
+[0m[[0m[31merror[0m] [0m[0m      DataPaoMovie("The Godfather Part II",6, 1300000, 9),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benczel/Documents/Projects/Own/datapao_homework/imdb/src/test/scala/hu/datapao/imdb/ReviewPenalizerTest.scala:22:19: not enough arguments for method apply: (title: hu.datapao.imdb.model.Title, numberOfOscars: hu.datapao.imdb.model.Oscars, numberOfRatings: hu.datapao.imdb.model.NumberOfRatings, rating: hu.datapao.imdb.model.Rating, newRating: hu.datapao.imdb.model.Rating): hu.datapao.imdb.model.DataPaoMovie in object DataPaoMovie.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter newRating.[0m
+[0m[[0m[31merror[0m] [0m[0m      DataPaoMovie("12 Angry Men", 3, 803000, 9)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benczel/Documents/Projects/Own/datapao_homework/imdb/src/test/scala/hu/datapao/imdb/ReviewPenalizerTest.scala:38:28: value < is not a member of hu.datapao.imdb.model.Rating[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(movie.newRating < movie.rating )[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /Users/benczel/Documents/Projects/Own/datapao_homework/imdb/project/target/.sbt-compilation-infos/root-test/.sbt-idea-lock.[0m

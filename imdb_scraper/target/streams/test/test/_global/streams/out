@@ -1,0 +1,45 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(hu.datapao.imdb.ImdbTest, org.scalatest.tools.Framework$$anon$1@449e3331, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(hu.datapao.imdb.ReviewPenalizerTest, org.scalatest.tools.Framework$$anon$1@449e3331, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(hu.datapao.imdb.Top250ParserTest, org.scalatest.tools.Framework$$anon$1@449e3331, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(hu.datapao.imdb.MoviePageParserTest, org.scalatest.tools.Framework$$anon$1@449e3331, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(hu.datapao.imdb.OscarCalculatorTest, org.scalatest.tools.Framework$$anon$1@449e3331, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReviewPenalizerTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- The Shawshank Redemption's new rating is the same as the old[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 12 Angry Men's new rating is smaller than the old one[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- The Godfather's new rating is 8.4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mOscarCalculatorTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 0 and the rating is 7.5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 4 and the rating is 7.5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 10 and the rating is 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if number of oscars is 11 and the rating is 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the newly core exceeds the 10[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMoviePageParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the movie has not won Oscar[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- movie page title is TheShawshank Redemption/A remény rabjai[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTop250ParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get move id is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get title is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get rating is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get get number of ratings[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get rating column is empty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the text extractor is correct and the first element value is 9.2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mImdbTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[33m- there is no internet !!! CANCELED !!![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[33m  org.scalatest.exceptions.TestCanceledException was thrown. (ImdbTest.scala:18)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the result count is 250[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get top is lower then 250 and higher then 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if the get top is lower then 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the top movie is The Shawshank Redemption/A remény rabjai[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[33m- the top movie's number of ratings is 2,719,862 !!! IGNORED !!![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- get movie details by url[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 401 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 21[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 21, failed 0, canceled 1, ignored 1, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	hu.datapao.imdb.ReviewPenalizerTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	hu.datapao.imdb.Top250ParserTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	hu.datapao.imdb.MoviePageParserTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	hu.datapao.imdb.OscarCalculatorTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	hu.datapao.imdb.ImdbTest[0m

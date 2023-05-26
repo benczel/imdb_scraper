@@ -1,0 +1,29 @@
+[0m[[0m[31merror[0m] [0m[0mjava.lang.IndexOutOfBoundsException: 0[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.apply(List.scala:79)[0m
+[0m[[0m[31merror[0m] [0m[0m	at hu.datapao.imdb.parser.Top250PageParser.$anonfun$parse$1(Top250PageParser.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at hu.datapao.imdb.parser.Top250PageParser.$anonfun$parse$1$adapted(Top250PageParser.scala:109)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.map(List.scala:246)[0m
+[0m[[0m[31merror[0m] [0m[0m	at hu.datapao.imdb.parser.Top250PageParser.parse(Top250PageParser.scala:109)[0m
+[0m[[0m[31merror[0m] [0m[0m	at hu.datapao.imdb.imdb.Imdb$.getTop250(Imdb.scala:46)[0m
+[0m[[0m[31merror[0m] [0m[0m	at hu.datapao.imdb.ImdbApplication$.main(ImdbApplication.scala:14)[0m
+[0m[[0m[31merror[0m] [0m[0m	at hu.datapao.imdb.ImdbApplication.main(ImdbApplication.scala)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.reflect.Method.invoke(Method.java:498)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.invokeMain(Run.scala:143)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.execute$1(Run.scala:93)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:120)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeSuccess(Run.scala:186)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.runWithLoader(Run.scala:120)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:1980)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1919)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:366)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:748)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) java.lang.IndexOutOfBoundsException: 0[0m
