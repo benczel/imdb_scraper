@@ -1,7 +1,0 @@
-#Successful Tests
-#Thu Mar 30 22:54:30 CEST 2023
-hu.datapao.imdb.ImdbTest=1680209670289
-hu.datapao.imdb.OscarCalculatorTest=1680209664208
-hu.datapao.imdb.Top250ParserTest=1680209669724
-hu.datapao.imdb.ReviewPenalizerTest=1680209664208
-hu.datapao.imdb.MoviePageParserTest=1680209666657
