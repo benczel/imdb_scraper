@@ -27,7 +27,7 @@ object ImdbApplication {
     val listOfFinalDatasets = imdbTopMovies.map(element =>
       FinalDataset(
         title = element.title,
-        numberOfOscars = imdbTopMoviesDetails.find(item => item.title.value.equals(element.title.value))
+        numberOfOscars = imdbTopMoviesDetails.find(item => item.title == element.title)
           .getOrElse(ImdbMovie(
             MovieId(""),
             Title(""),
