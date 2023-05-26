@@ -16,6 +16,7 @@ object ImdbApplication {
       case Left(movies) => movies
       case Right(_) => sys.exit(1)
     }
+
     val imdbTopMoviesDetails = imdbTopMovies.map(element =>
       Imdb.getMovieDetails(element.url) match {
         case Left(movie) => movie
@@ -61,11 +62,11 @@ object ImdbApplication {
 
     val writeableFormat = finalDataset.sortBy(_.newRating.value)(Ordering[Double].reverse)
       .map(movie => List(
-              movie.title,
-              movie.numberOfOscars,
-              movie.numberOfRatings,
-              movie.rating,
-              movie.newRating
+              movie.title.value,
+              movie.numberOfOscars.value,
+              movie.numberOfRatings.value,
+              movie.rating.value,
+              movie.newRating.value
             )
           )
 

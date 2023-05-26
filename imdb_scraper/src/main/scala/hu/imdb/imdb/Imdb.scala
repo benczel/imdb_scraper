@@ -54,7 +54,7 @@ object Imdb {
    * @return value is the movie's details that is on the given url or a throwable object
    */
   def getMovieDetails(movieUrl:Url):Either[ImdbMovie, Throwable] = {
-    val moviesFullUrl = rootUrl + movieUrl
+    val moviesFullUrl = rootUrl + movieUrl.value
     lazy val moviePage = tryToOpenThePage(moviesFullUrl)
     moviePage match {
       case Success(page) => Left(MoviePageParser[ImdbMovie](page).parse().head)
