@@ -3,7 +3,7 @@ package hu.imdb
 import org.scalatest.{BeforeAndAfter, Ignore}
 import org.scalatest.funsuite.AnyFunSuite
 import hu.imdb.imdb.Imdb
-import hu.imdb.model.{ImdbMovie, Url}
+import hu.imdb.model.{ImdbMovie, Title, Url}
 
 class ImdbTest
   extends AnyFunSuite
@@ -45,13 +45,13 @@ class ImdbTest
   }
 
   test("the top movie is The Shawshank Redemption/A remény rabjai"){
-    val engTitle = "The Shawshank Redemption"
-    val huTitle = "A remény rabjai"
+    val engTitle = Title("The Shawshank Redemption")
+    val huTitle = Title("A remény rabjai")
 
 
     Imdb.getTop250(1) match {
       case Left(topMovieTitle) => assert(
-        (topMovieTitle.head.title equals engTitle) || (topMovieTitle.head.title equals huTitle)
+        (topMovieTitle.head.title ==  engTitle) || (topMovieTitle.head.title == huTitle)
       )
       case Right(_) => cancel()
     }
@@ -62,7 +62,7 @@ class ImdbTest
     val numberOfRatings  = 2719862
 
     Imdb.getTop250(1) match {
-      case Left(topMovie) => assert(topMovie.head.numberOfRatings == numberOfRatings)
+      case Left(topMovie) => assert(topMovie.head.numberOfRatings.value == numberOfRatings)
       case Left(_) => cancel()
     }
   }

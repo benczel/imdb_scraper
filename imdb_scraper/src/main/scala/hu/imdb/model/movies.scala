@@ -20,7 +20,7 @@ final case class FinalDataset(
                          numberOfOscars:Oscars,
                          numberOfRatings:NumberOfRatings,
                          rating:Rating,
-                         newRating:Rating
+                         newRating:Rating = Rating()
                        ) extends Movie
 
 /**
