@@ -1,9 +1,8 @@
 package hu.imdb
 
-import com.github.tototoshi.csv.CSVWriter
-import hu.imdb.functions.{OscarCalculator, ReviewPenalizer}
+import hu.imdb.functions.{OscarCalculator, Penalizer}
 import hu.imdb.imdb.Imdb
-import hu.imdb.model.{FinalDataset, ImdbMovie, MovieId, Oscars, Rating, Title}
+import hu.imdb.model.{FinalMovie, ImdbMovie, MovieId, Oscars, Rating, Title}
 
 import java.io.File
 
@@ -26,7 +25,7 @@ object ImdbApplication {
 
     //create the required dataset
     val listOfFinalDatasets = imdbTopMovies.map(element =>
-      FinalDataset(
+      FinalMovie(
         title = element.title,
         numberOfOscars = imdbTopMoviesDetails.find(item => item.title == element.title)
           .getOrElse(ImdbMovie(
@@ -40,38 +39,22 @@ object ImdbApplication {
       )
     )
 
-    /***
-     * TODO refactor this part because it not consistent
-     */
     //create ReviewPenalizer object
-    val reviewPenalizer = ReviewPenalizer(listOfFinalDatasets)
-    val reviewedMovies = reviewPenalizer.penalize
+    val penalizer = Penalizer(listOfFinalDatasets)
+    val penalizedMovies = penalizer.calculateAndSetNewRating
 
     //create OscarCalculator object
     val oscarCalculator = OscarCalculator(10)
-    val finalDataset = reviewedMovies.map(movie =>
-      movie.copy(newRating = Rating(oscarCalculator.calculate(movie)))
+    val finalDataset = penalizedMovies.map(movie =>
+      movie.copy(newRating = Rating(oscarCalculator.calculateOscarValue(movie)))
     )
 
-    /***
-     * TODO create a writer class for this part of the code
-     */
-    //writing top20Movies.csv file
-    val file = new File("top20Movies.csv")
-    val writer = CSVWriter.open(file)
 
     val writeableFormat = finalDataset.sortBy(_.newRating.value)(Ordering[Double].reverse)
-      .map(movie => List(
-              movie.title.value,
-              movie.numberOfOscars.value,
-              movie.numberOfRatings.value,
-              movie.rating.value,
-              movie.newRating.value
-            )
+      .map(movie =>
+                FinalMovie.unapply(movie).get.productIterator.toList
           )
 
-    writer.writeAll(writeableFormat)
-
-    writer.close()
+    Writer().write("top20Movies.csv", writeableFormat)
   }
 }

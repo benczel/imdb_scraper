@@ -5,30 +5,30 @@ import hu.imdb.parser.Top250PageParser
 import net.ruippeixotog.scalascraper.browser.JsoupBrowser
 import net.ruippeixotog.scalascraper.dsl.DSL.deepFunctorOps
 import net.ruippeixotog.scalascraper.model.Document
-import org.scalatest.BeforeAndAfter
+import org.scalatest.{BeforeAndAfterAll}
 import org.scalatest.funsuite.AnyFunSuite
 
 import scala.util.{Failure, Success, Try}
 
 class Top250ParserTest
   extends AnyFunSuite
-  with BeforeAndAfter {
+  with BeforeAndAfterAll {
 
   private val browser = JsoupBrowser()
   private var top250Page:Document = _
   private val url = "https://www.imdb.com/chart/top"
   private var top250Parser:Top250PageParser = _
 
-  before{
-      top250Page = Try {
-        browser.get(url)
-      } match {
-        case Success(page) => page
-        case Failure(_) => cancel()
-      }
+  override def beforeAll(): Unit = {
+      top250Page =
+        Try {
+          browser.get(url)
+        } match {
+          case Success(page) => page
+          case Failure(_) => cancel()
+        }
       top250Parser = Top250PageParser[ImdbTopMovie](top250Page)
-
-  }
+    }
 
   test("if the get move id is 250"){
     assert(top250Parser.getMovieId().length == 250)

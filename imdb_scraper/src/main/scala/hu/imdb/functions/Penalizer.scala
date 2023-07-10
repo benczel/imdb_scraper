@@ -1,16 +1,16 @@
 package hu.imdb.functions
 
-import hu.imdb.model.{FinalDataset, Rating}
+import hu.imdb.model.{FinalMovie, Rating}
 
-/** Review  and Penalize the movies
+/** Penalizer class that distributes punishment based on the number of ratings
  *
  * @param movies list of movies that we would like to review
  * @param divisor the divisor that defines the range after giving the penalty default: 100000
  * @param penalty the value of penalty per divisor default: 0.1
  */
-class ReviewPenalizer(movies:List[FinalDataset],
-                      divisor:Int = 100000,
-                      penalty:Double = 0.1
+class Penalizer(movies:List[FinalMovie],
+                divisor:Int = 100000,
+                penalty:Double = 0.1
                      ) {
 
   /** Find maximum value in the list
@@ -23,8 +23,8 @@ class ReviewPenalizer(movies:List[FinalDataset],
 
   /** Calculate the score
    *
-   * @param highestValue the highest value in the given list
-   * @param currentValue the current value of the movie
+   * @param theHighestNumberOfRating the highest value in the given list
+   * @param numberOfRating the current value of the movie
    * @return the calculated score based on the given parameter
    */
   private def calculateScore(theHighestNumberOfRating:Int,
@@ -42,17 +42,17 @@ class ReviewPenalizer(movies:List[FinalDataset],
    * @return the newly calculated rating value for the movie
    */
   private def calculateNewRating(theHighestNumberOfRating:Int,
-                                 movie: FinalDataset):Double = {
+                                 movie: FinalMovie):Double = {
     val score = calculateScore(theHighestNumberOfRating, movie.numberOfRatings.value)
     //Formatting the output
     BigDecimal(movie.rating.value - score).setScale(1, BigDecimal.RoundingMode.HALF_UP).toDouble
   }
 
-  /** Penalize the movies
+  /** Calculate and set new new rating
    *
    * @return a new list in which the new rating values are set
    */
-  def penalize:List[FinalDataset] = {
+  def calculateAndSetNewRating:List[FinalMovie] = {
     val theHighestNumberOfRating = findTheHighestRating
     movies.map(e =>
       e.copy(newRating = Rating(calculateNewRating(theHighestNumberOfRating,e)))
@@ -60,8 +60,8 @@ class ReviewPenalizer(movies:List[FinalDataset],
   }
 
 }
-/** Factory for [[ReviewPenalizer]] instances. */
-object ReviewPenalizer {
+/** Factory for [[Penalizer]] instances. */
+object Penalizer {
 
   /** Creates a review penalizer instance with a given list of movies
    *
@@ -70,11 +70,11 @@ object ReviewPenalizer {
    * @param penalty the value of penalty per divisor default: 0.1
    * @return a new ReviewPenalizer with given list of movies
    */
-  def apply(movies:List[FinalDataset],
+  def apply(movies:List[FinalMovie],
             divisor: Int = 100000,
             penalty: Double = 0.1
-           ): ReviewPenalizer =
-    new ReviewPenalizer(movies,
+           ): Penalizer =
+    new Penalizer(movies,
       divisor,
       penalty
     )

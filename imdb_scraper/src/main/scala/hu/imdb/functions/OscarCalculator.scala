@@ -1,6 +1,6 @@
 package hu.imdb.functions
 
-import hu.imdb.model.{FinalDataset, Oscars}
+import hu.imdb.model.{FinalMovie, Oscars}
 
 
 /**  Calculate new rating for movies based on the won oscars
@@ -47,7 +47,7 @@ class  OscarCalculator(maximumRatingValue:Int) {
    * @param movie is that the calculation is executed
    * @return a new calculated rating value
    */
-  def calculate(movie: FinalDataset):Double = {
+  def calculateOscarValue(movie: FinalMovie):Double = {
     checkNewValue (movie.rating.value + score(movie.numberOfOscars))
     //what if the original rate is 0 and the movie has won some Oscars:)
     //what it the maximum value for rating 10?

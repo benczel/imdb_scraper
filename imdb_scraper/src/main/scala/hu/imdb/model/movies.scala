@@ -7,7 +7,7 @@ package hu.imdb.model
 sealed trait Movie
 
 /**
- * Describes a movie that is in the home test
+ * Describes a movie that is in the final data set
  *
  *  @param title the title of the movie
  *  @param numberOfOscars the number of oscars that was awarded
@@ -15,7 +15,7 @@ sealed trait Movie
  *  @param rating the current rating of the movie
  *  @param newRating the newly calculated rating value
  */
-final case class FinalDataset(
+final case class FinalMovie(
                          title:Title,
                          numberOfOscars:Oscars,
                          numberOfRatings:NumberOfRatings,
